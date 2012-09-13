@@ -26,7 +26,7 @@ This plugin allows you to create a quick popup bar with custom content in your s
 
 = Want more features ? =
 
-Check out the [premium version] (http://xyzscripts.com/wordpress-plugins/xyz-wp-popup/ "XYZ WP Popup") of this plugin.
+Check out the [premium version](http://xyzscripts.com/wordpress-plugins/xyz-wp-popup/ "XYZ WP Popup") of this plugin.
 
 = About =
 
