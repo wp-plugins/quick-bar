@@ -8,7 +8,7 @@ Tested up to: 3.4.2
 Stable tag: 1.0
 License: GPLv2 or later
 
-Create a javascript based, light-weight and non-annoying quick notice bar or sidebar  in your blog.
+Create a javascript based, light-weight and non-annoying floating notice bar or sidebar  in your blog.
 
 == Description ==
 
@@ -22,11 +22,11 @@ A quicklook into Quick Bar
     ★ Css settings like color, z-index, border etc
     ★ Shortcode for displaying quick bar in specific pages
 
-This plugin allows you to create a quick popup bar with custom content in your site. You can place it like a floating sidebar on any side of the page using the available predefined positions.
+This plugin allows you to create a quick popup bar (aka sidebar) with custom content in your site. You can place it like a floating sidebar on any side of the page using the available predefined positions.
 
-You can customize the quick bar display by configuring various settings such as display logic settings ( based on timeout after page load, based on number of pages browsed,  repeat interval) and style settings(z-index, color, border etc). The plugin supports automatic and manual (shortcode) display. 
+You can customize the quick bar (sidebar) display by configuring various settings such as display logic settings ( based on timeout after page load, based on number of pages browsed,  repeat interval) and style settings(z-index, color, border etc). The plugin supports automatic and manual (shortcode) display. 
 
-You can use the plugin to display any type of contents such as special promotions, subscription forms, social media icons, feedback forms and much more.
+You can use the quickbar (sidebar) to display any type of contents such as special promotions, subscription forms, social media icons, feedback forms and much more.
 
 = Want more features ? =
 
@@ -47,25 +47,25 @@ If you need any further help, you may contact our [support desk](http://xyzscrip
 
 == Frequently Asked Questions ==
 
-= 1. What is a "quick bar" ? =
+= 1. What is a "quick bar" or "sidebar" ? =
 
-A quick bar is a dhtml popup used to display any content within a webpage, above the the page content. It is normally used to show social media links, subscription forms, contact forms, promotions, etc
+A quick bar or sidebar is a floating dhtml popup used to display any content within a webpage, above the the page content. It is normally used to show social media links, subscription forms, contact forms, promotions, etc
 
 = 2. The Quick Bar plugin is not working properly =
 
 Please check the wordpress version you are using. Make sure it meets the minimum version recommended by us. Make sure all files of the `Quick Bar` plugin are uploaded to the folder `wp-content/plugins/`
 
-= 3. What kind of contents can be placed in a quick bar? =
+= 3. What kind of contents can be placed in a quick bar (sidebar)? =
 
 You may  use the quick bar to display any type of contents such as social media icons, special promotions, subscription forms, contact forms  and much more.
 
-= 4. Can I display quick bar popup in specific pages only ? =
+= 4. Can I display quick bar popup (sidebar) in specific pages only ? =
 
 Yes, you can do this by using the shortcode provided from settings page.
 
-= 5. Can I create multiple quick bar popup boxes for different pages ? =
+= 5. Can I create multiple quick bar popup boxes  for different pages ? =
 
-You need to purchase the premium version for having this feature.
+To create multiple quickbars (sidebars), you need to purchase the premium version.
 
 = 6. Where can i get the premium version ? =
 
