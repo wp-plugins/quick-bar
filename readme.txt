@@ -2,19 +2,19 @@
 Contributors: f1logic
 Donate link: http://xyzscripts.com/donate/
 
-Tags: quick bar, quickbar, sidebar, floating sidebar, floating notice bar, floating bar, quick popup bar, quick access bar, quick notice bar, quick message bar, quick display bar, quick bar with custom message
+Tags: quick bar, quickbar, sidebar, floating sidebars, floating notice bar, floating bar, quick popup bar, quick access bar, quick notice bar, quick message bar, quick display bar, quick bar with custom message
 Requires at least: 2.8
 Tested up to: 3.4.2
 Stable tag: 1.0
 License: GPLv2 or later
 
-Create a javascript based, light-weight and non-annoying quick bar in your blog.
+Create a javascript based, light-weight and non-annoying quick notice bar or sidebar  in your blog.
 
 == Description ==
 
 A quicklook into Quick Bar
 
-    ★ Create a light weight quick bar
+    ★ Create a light weight quick bar (sidebar)
     ★ Full control on quick bar content
     ★ Standard WordPress content editor
     ★ Timeout based quick bar display
@@ -24,7 +24,9 @@ A quicklook into Quick Bar
 
 This plugin allows you to create a quick popup bar with custom content in your site. You can place it like a floating sidebar on any side of the page using the available predefined positions.
 
-You can customize the quick bar display by configuring various settings such as display logic settings ( based on timeout after page load, based on number of pages browsed,  repeat interval) and style settings(z-index, color, border etc). The plugin supports automatic and manual (shortcode) display. You can use the plugin to display any type of contents such as special promotions, subscription forms, social media icons, feedback forms and much more.
+You can customize the quick bar display by configuring various settings such as display logic settings ( based on timeout after page load, based on number of pages browsed,  repeat interval) and style settings(z-index, color, border etc). The plugin supports automatic and manual (shortcode) display. 
+
+You can use the plugin to display any type of contents such as special promotions, subscription forms, social media icons, feedback forms and much more.
 
 = Want more features ? =
 
