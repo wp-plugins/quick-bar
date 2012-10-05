@@ -14,8 +14,8 @@ Create a javascript based, light-weight and non-annoying floating notice bar or 
 
 A quicklook into Quick Bar
 
-    ★ Create a light weight quick bar (sidebar)
-    ★ Full control on quick bar content
+    ★ Create a light weight floating sidebar or quick bar
+    ★ Full control on quick bar (sidebar) content
     ★ Standard WordPress content editor
     ★ Timeout based quick bar display
     ★ Display based on browsed number of pages
@@ -49,7 +49,7 @@ If you need any further help, you may contact our [support desk](http://xyzscrip
 
 = 1. What is a "quick bar" or "sidebar" ? =
 
-A quick bar or sidebar is a floating dhtml popup used to display any content within a webpage, above the the page content. It is normally used to show social media links, subscription forms, contact forms, promotions, etc
+A quick bar or sidebar is a floating dhtml popup used to display any content within a webpage, above the the page content. Sidebars are normally used to show social media links, subscription forms, contact forms, promotions, etc
 
 = 2. The Quick Bar plugin is not working properly =
 
@@ -57,7 +57,7 @@ Please check the wordpress version you are using. Make sure it meets the minimum
 
 = 3. What kind of contents can be placed in a quick bar (sidebar)? =
 
-You may  use the quick bar to display any type of contents such as social media icons, special promotions, subscription forms, contact forms  and much more.
+You may  use the quick bar (sidebar) to display any type of contents such as social media icons, special promotions, subscription forms, contact forms  and much more.
 
 = 4. Can I display quick bar popup (sidebar) in specific pages only ? =
 
