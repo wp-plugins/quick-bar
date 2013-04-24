@@ -36,7 +36,13 @@ Check out the [premium version](http://xyzscripts.com/wordpress-plugins/xyz-wp-p
 
 Quick Bar is developed and maintained by [XYZScripts](http://xyzscripts.com/ "xyzscripts.com"). For any support, you may [contact us](http://xyzscripts.com/support/ "XYZScripts Support").
 
+★ [Quick Bar User Guide](http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/ "Quick Bar User Guide")
+★ [Quick Bar FAQ](http://kb.xyzscripts.com/wordpress-plugins/quick-bar/ "Quick Bar FAQ")
+
 == Installation ==
+
+★ [Quick Bar User Guide](http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/ "Quick Bar User Guide")
+★ [Quick Bar FAQ](http://kb.xyzscripts.com/wordpress-plugins/quick-bar/ "Quick Bar FAQ")
 
 1. Extract `quick-bar.zip` to your `/wp-content/plugins/` directory.
 2. In the admin panel under plugins activate Quick Bar.
@@ -46,6 +52,9 @@ Quick Bar is developed and maintained by [XYZScripts](http://xyzscripts.com/ "xy
 If you need any further help, you may contact our [support desk](http://xyzscripts.com/support/ "XYZScripts Support").
 
 == Frequently Asked Questions ==
+
+★ [Quick Bar User Guide](http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/ "Quick Bar User Guide")
+★ [Quick Bar FAQ](http://kb.xyzscripts.com/wordpress-plugins/quick-bar/ "Quick Bar FAQ")
 
 = 1. What is a "quick bar" or "sidebar" ? =
 
@@ -88,6 +97,8 @@ More questions ? [Drop a mail](http://xyzscripts.com/support/ "XYZScripts Suppor
 
 == More Information ==
 
+★ [Quick Bar User Guide](http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/ "Quick Bar User Guide")
+★ [Quick Bar FAQ](http://kb.xyzscripts.com/wordpress-plugins/quick-bar/ "Quick Bar FAQ")
 
 = Troubleshooting =
 
