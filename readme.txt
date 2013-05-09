@@ -85,7 +85,7 @@ More questions ? [Drop a mail](http://xyzscripts.com/support/ "XYZScripts Suppor
 
 == Screenshots ==
 
-1. Sample quick bar.
+1. Sample quick bar. 
 
 == Changelog ==
 
