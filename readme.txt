@@ -4,7 +4,7 @@ Donate link: http://xyzscripts.com/donate/
 
 Tags: quick bar, quickbar, sidebar, floating sidebars, floating notice bar, floating bar, quick popup bar, quick access bar, quick notice bar, quick message bar, quick display bar, quick bar with custom message
 Requires at least: 2.8
-Tested up to: 3.5.1
+Tested up to: 3.6
 Stable tag: 1.0
 License: GPLv2 or later
 
