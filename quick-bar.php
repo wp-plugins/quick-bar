@@ -3,7 +3,7 @@
 Plugin Name:Quick Bar
 Plugin URI: http://xyzscripts.com/wordpress-plugins/quick-bar/
 Description: This plugin allows you to create a quick access bar with custom content in your site. You can customize the quick bar display by configuring various settings such as  position settings (height,width,top,left), display logic settings (time delay after page load, number of pages to browse,  repeat interval) and style settings(z-index, opacity, color, border etc). The plugin supports automatic and manual (shortcode) display.
-Version: 1.0
+Version: 1.1
 Author: xyzscripts.com
 Author URI: http://xyzscripts.com/
 License: GPLv2 or later
@@ -45,6 +45,8 @@ require( dirname( __FILE__ ) . '/admin/menu.php' );
 
 require( dirname( __FILE__ ) . '/create-quickbar.php' );
 
+require( dirname( __FILE__ ) . '/ajax-handler.php' );
+
 require( dirname( __FILE__ ) . '/shortcode-handler.php' );
 
 require( dirname( __FILE__ ) . '/admin/destruction.php' );
@@ -55,10 +57,28 @@ if(get_option('xyz_credit_link')=="qbr"){
 
 }
 function xyz_qbr_credit() {
-	$content = '<div style="clear:both;width:100%;text-align:center; font-size:11px; "><a target="_blank" href="http://xyzscripts.com/wordpress-plugins/quick-bar/details">Quick Bar</a> Powered By : <a target="_blank" title="PHP Scripts & Programs" href="http://www.xyzscripts.com" >XYZScripts.com</a></div>';
+	$content = '<div style="clear:both;width:100%;text-align:center; font-size:11px; "><a target="_blank" href="http://xyzscripts.com/wordpress-plugins/quick-bar/details">Quick Bar</a> Powered By : <a target="_blank" title="PHP Scripts & Wordpress Plugins" href="http://www.xyzscripts.com" >XYZScripts.com</a></div>';
 	echo $content;
 }
 
+
+
+function xyz_qbr_query_vars($vars) {
+	$vars[] = 'xyz_qbr';
+	return $vars;
+}
+add_filter('query_vars', 'xyz_qbr_query_vars');
+
+
+function xyz_qbr_parse_request($wp) {
+	if (array_key_exists('xyz_qbr', $wp->query_vars)
+			&& $wp->query_vars['xyz_qbr'] == 'iframe') {
+		require( dirname( __FILE__ ) . '/iframe.php' );
+		die;
+	}
+
+}
+add_action('parse_request', 'xyz_qbr_parse_request');
 
 
 ?>

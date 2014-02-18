@@ -1,12 +1,11 @@
 <?php
 
-if ( is_admin() )
-{
+
 
 	add_action('admin_menu', 'qbr_menu');
 	
 
-}
+
 
 function qbr_menu()
 {
@@ -61,10 +60,13 @@ function qbr_farbtastic_style()
 }
 function xyz_qbr_admin_style()
 {
-	require( dirname( __FILE__ ) . '/style.php' );
+	//require( dirname( __FILE__ ) . '/style.php' );
+	wp_enqueue_script('jquery');
+	wp_register_style('xyz_qbr_style', plugins_url('quick-bar/css/style.css'));
+	wp_enqueue_style('xyz_qbr_style');
 
 }
-	wp_enqueue_script('jquery');
-add_action('admin_print_styles', 'xyz_qbr_admin_style');
+	
+add_action('admin_enqueue_scripts', 'xyz_qbr_admin_style');
 
 ?>

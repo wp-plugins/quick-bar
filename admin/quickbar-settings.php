@@ -6,43 +6,54 @@
 		$xyz_qbr_iframe=$_POST['xyz_qbr_iframe'];
 		$xyz_qbr_repeat_interval_timing=$_POST['xyz_qbr_repeat_interval_timing'];
 		$xyz_qbr_html=stripslashes($_POST['xyz_qbr_html']);
-		$xyz_qbr_title=$_POST['xyz_qbr_title'];
-		if($xyz_qbr_title=="")
-		{
-			
-			$xyz_qbr_title="Title";
-		}
-		$xyz_qbr_title_color=$_POST['xyz_qbr_title_color'];
-		$xyz_qbr_display_position=$_POST['xyz_qbr_display_position'];
-		$xyz_qbr_top=abs(intval($_POST['xyz_qbr_top']));
-	 $xyz_qbr_bottom=abs(intval($_POST['xyz_qbr_bottom']));
+		
 		$xyz_qbr_width=abs(intval($_POST['xyz_qbr_width']));
 		$xyz_qbr_height=abs(intval($_POST['xyz_qbr_height']));
-		  $xyz_qbr_left=abs(intval($_POST['xyz_qbr_left']));
-		
-		$xyz_qbr_right=abs(intval($_POST['xyz_qbr_right']));
+		 
 		$xyz_qbr_delay=abs(intval($_POST['xyz_qbr_delay']));
 		$xyz_qbr_page_count=abs(intval($_POST['xyz_qbr_page_count']));
 		$xyz_qbr_repeat_interval=abs(intval($_POST['xyz_qbr_repeat_interval']));
 		$xyz_qbr_mode=$_POST['xyz_qbr_mode'];
 		$xyz_qbr_z_index=intval($_POST['xyz_qbr_z_index']);
 		
-	
+		$xyz_qbr_showing_option="0,0,0";
 		
 		 $xyz_qbr_bg_color=$_POST['xyz_qbr_bg_color'];		
 		$xyz_qbr_corner_radius=abs(intval($_POST['xyz_qbr_corner_radius']));
-		$xyz_qbr_top_dim=$_POST['xyz_qbr_top_dim'];
-		$xyz_qbr_left_dim=$_POST['xyz_qbr_left_dim'];
-		$xyz_qbr_right_dim=$_POST['xyz_qbr_right_dim'];
-		$xyz_qbr_bottom_dim=$_POST['xyz_qbr_bottom_dim'];
+		
 		$xyz_qbr_width_dim=$_POST['xyz_qbr_width_dim'];
 		$xyz_qbr_height_dim=$_POST['xyz_qbr_height_dim'];
 		$xyz_qbr_border_color=$_POST['xyz_qbr_border_color'];
 		$xyz_qbr_border_width=$_POST['xyz_qbr_border_width'];
 		$xyz_qbr_page_option=$_POST['xyz_qbr_page_option'];
 		$xyz_qbr_close_button_option=$_POST['xyz_qbr_close_button_option'];
-		$xyz_qbr_positioning=$_POST['xyz_qbr_positioning'];
+		//$xyz_qbr_positioning=$_POST['xyz_qbr_positioning'];
 		$xyz_qbr_position_predefined=$_POST['xyz_qbr_position_predefined'];
+		
+
+		
+		if($xyz_qbr_page_option==2)
+		{
+			$qbr_pgf=0;
+			$qbr_pof=0;
+			$qbr_hp=0;
+			if(isset($_POST['xyz_qbr_pages']))
+				$qbr_pgf=1;
+			if(isset($_POST['xyz_qbr_posts']))
+				$qbr_pof=1;
+			if(isset($_POST['xyz_qbr_hp']))
+				$qbr_hp=1;
+		
+			$xyz_qbr_showing_option=$qbr_pgf.",".$qbr_pof.",".$qbr_hp;
+		
+			update_option('xyz_qbr_showing_option',$xyz_qbr_showing_option);
+		
+		
+		
+		
+		
+		
+		}	
 		
 		
 		
@@ -67,12 +78,11 @@ if(isset($_POST['xyz_qbr_cookie_resett']))
 }
 	
 		update_option('xyz_qbr_html',$xyz_qbr_html);
-		update_option('xyz_qbr_top',$xyz_qbr_top);
+		
 		update_option('xyz_qbr_width',$xyz_qbr_width);
-		update_option('xyz_qbr_right',$xyz_qbr_right);
-		update_option('xyz_qbr_bottom',$xyz_qbr_bottom);
+		
 		update_option('xyz_qbr_height',$xyz_qbr_height);
-		update_option('xyz_qbr_left',$xyz_qbr_left);
+		
 		update_option('xyz_qbr_delay',$xyz_qbr_delay);
 		update_option('xyz_qbr_page_count',$xyz_qbr_page_count);
 		update_option('xyz_qbr_repeat_interval',$xyz_qbr_repeat_interval);
@@ -80,13 +90,11 @@ if(isset($_POST['xyz_qbr_cookie_resett']))
 		update_option('xyz_qbr_mode',$xyz_qbr_mode);
 		update_option('xyz_qbr_z_index',$xyz_qbr_z_index);
 		
-		update_option('xyz_qbr_color',$xyz_qbr_color);
+		
 		update_option('xyz_qbr_corner_radius',$xyz_qbr_corner_radius);
-		update_option('xyz_qbr_top_dim',$xyz_qbr_top_dim);
+		
 		update_option('xyz_qbr_height_dim',$xyz_qbr_height_dim);	
-		update_option('xyz_qbr_left_dim',$xyz_qbr_left_dim);
-		update_option('xyz_qbr_bottom_dim',$xyz_qbr_bottom_dim);
-		update_option('xyz_qbr_right_dim',$xyz_qbr_right_dim);
+		
 
 		update_option('xyz_qbr_width_dim',$xyz_qbr_width_dim);
 		update_option('xyz_qbr_border_color',$xyz_qbr_border_color);
@@ -96,12 +104,6 @@ if(isset($_POST['xyz_qbr_cookie_resett']))
 		update_option('xyz_qbr_close_button_option',$xyz_qbr_close_button_option);
 		update_option('xyz_qbr_iframe',$xyz_qbr_iframe);
 	
-		update_option('xyz_qbr_display_position',$xyz_qbr_display_position);
-		
-		update_option('xyz_qbr_positioning',$xyz_qbr_positioning);
-		
-		update_option('xyz_qbr_title',$xyz_qbr_title);
-		update_option('xyz_qbr_title_color',$xyz_qbr_title_color);
 			update_option('xyz_qbr_position_predefined',$xyz_qbr_position_predefined);
 		
 		?><br>
@@ -141,16 +143,22 @@ cursor:default;
 v=document.getElementById('xyz_qbr_page_option').value;
 if(v==1)
 {
-	document.getElementById('automatic').style.display='';
-
+	document.getElementById('automatic').style.display='block';
+	document.getElementById('shopt').style.display='none';	
 	document.getElementById('shortcode').style.display='none';		
+}
+if(v==2)
+{
+	document.getElementById('shopt').style.display='block';
+	document.getElementById('shortcode').style.display='none';
+	document.getElementById('automatic').style.display='none';	
 }
 
 if(v==3)
 
 {
-	document.getElementById('shortcode').style.display='';	
-	
+	document.getElementById('shortcode').style.display='block';
+	document.getElementById('shopt').style.display='none';
 	document.getElementById('automatic').style.display='none';
 }
   }
@@ -198,7 +206,10 @@ $xyz_qbr_position_predefined=get_option('xyz_qbr_position_predefined');
 ?>
 <h2>Quick Bar  Settings</h2>
 <form method="post" >
-
+<?php 
+$xyz_qbr_showing_option=get_option('xyz_qbr_showing_option');
+$xyz_qbr_sh_arr=explode(",", $xyz_qbr_showing_option);
+?>
 <table  class="widefat" style="width:98%">
 
 <tr valign="top" >
@@ -378,15 +389,29 @@ $xyz_qbr_repeat_interval_timing=get_option('xyz_qbr_repeat_interval_timing');
 <td>
 <select name="xyz_qbr_page_option" id="xyz_qbr_page_option" onchange="bgchange()">
 <option value ="1" <?php if($xyz_qbr_page_option=='1') echo 'selected'; ?> >Automatic </option>
-
+<option value ="2" <?php if($xyz_qbr_page_option=='2') echo 'selected'; ?> >Specific Pages</option>
 <option value ="3" <?php if($xyz_qbr_page_option=='3') echo 'selected'; ?> >Manual </option>
 </select></td></tr>
-<tr valign="top" id="automatic"  style="display: none"><td scope="row" ></td><td >(Popup will load in all pages)</td>
+
+
+<tr valign="top" ><td scope="row" ></td><td>
+<span  id="automatic" >Popup will load in all pages</span>
+<span  id="shopt" >
+<input name="xyz_qbr_pages" value="<?php echo $xyz_qbr_sh_arr[0];?>"<?php if( $xyz_qbr_sh_arr[0]==1){?> checked="checked"<?php } ?> type="checkbox"> On Pages 
+<input name="xyz_qbr_posts" value="<?php echo  $xyz_qbr_sh_arr[1];?>"<?php if( $xyz_qbr_sh_arr[1]==1){?> checked="checked"<?php }?>  type="checkbox"> On Posts
+<input name="xyz_qbr_hp" value="<?php echo  $xyz_qbr_sh_arr[2];?>"<?php if( $xyz_qbr_sh_arr[2]==1){?> checked="checked"<?php }?>  type="checkbox"> On Home page 
+</span>
+<span  id="shortcode" >Use this short code in your pages - [xyz_qbr_default_code]</span>
+</td>
+</tr>
+
+
+<!--  <tr valign="top" id="automatic"  style="display: none"><td scope="row" ></td><td >(Popup will load in all pages)</td>
 
 </tr>
 
 <tr valign="top" id="shortcode"  style="display: none"><td scope="row"></td><td>Use this short code in your pages - [xyz_qbr_default_code]</td>
-</tr>
+</tr>-->
 
 
 <tr valign="top">

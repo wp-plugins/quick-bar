@@ -1,37 +1,15 @@
-  <div style="clear: both;"></div>
-
-    <style>
-    
-    .xyz_feedback{
-    background: #CEEAF7; /* Old browsers */
-border: 1px solid #64cfe8;
-width: 48%;    
-height:200px;
-    padding-left: 10px;
-    float: left;
-    }
-    
-    .xyz_feedback ul{
-    font-weight: bold;
-    }
-
-    
-    .xyz_subscribe{
-    background: #bae598; /* Old browsers */
-border: 1px solid #4d8a1d;
-width: 48%;    
-    padding-left: 10px;
-    float:right;
-height:200px;
-    
-    }
-    
-    
-    </style>
+<?php 
+?>
+  
+<div style="clear: both;"></div>
 <p></p>
 <div style="width: 98%">
 
- 
+ <?php 
+$xyz_qbr_adds_enable=get_option('xyz_qbr_adds_enable');
+if($xyz_qbr_adds_enable==1)
+{
+?>
 
 <div id="xyz-wp-popup-premium">
 
@@ -41,52 +19,38 @@ height:200px;
 </h2>
 </div>
 <div style="float: left;padding: 5px">
-<a target="_blank" href="http://xyzscripts.com/members/product/purchase/XYZWPPOP"><img src="<?php  echo plugins_url("quick-bar/admin/images/orange_buynow.png"); ?>"></a>
+<a target="_blank" href="http://xyzscripts.com/members/product/purchase/XYZWPPOP"><img src="<?php  echo plugins_url("quick-bar/images/orange_buynow.png"); ?>"></a>
 </div>
 
    
  </div>
 
-
+<?php 
+}
+?>
 
       
     <div style="clear:both"></div>
-
+<div style="width: 100%;">
 
 <div class="xyz_feedback">
-    <h2>Feedback</h2>
-
-   Your feedback and suggestions are our sources for betterment of this plugin. You can provide your feedback using any of the options below.
-   <p></p> 
-   <ul style="float: left;">
+    
    
-   <li><a target="_blank" href="http://xyzscripts.com/donate/1">Donate a dollar</a></li>
-   <li><a target="_blank" href="http://wordpress.org/extend/plugins/full-screen-popup/">Rate this plugin</a></li>
-   <li><a target="_blank" href="http://xyzscripts.com/support/">Suggestions</a></li>
-   </ul>
-   <ul style="float: left;padding-left: 30px">
-<li><a target="_blank" href="http://facebook.com/xyzscripts" class="xyz_fbook">Like us on facebook</a></li>
-   <li><a target="_blank" href="http://twitter.com/xyzscripts" class="xyz_twitt">Follow us on twitter</a></li>
-   <li><a target="_blank" href="https://plus.google.com/101215320403235276710/" class="xyz_gplus">+1 us on Google+</a></li>
+   <a target="_blank" href="http://xyzscripts.com/donate/1" class="xyz_donate">Donate a dollar</a> -
+   <a target="_blank" href="http://wordpress.org/extend/plugins/quick-bar/"  class="xyz_star">Rate this plugin</a> -
+   <a target="_blank" href="http://xyzscripts.com/support/" class="xyz_suggest">Suggestions</a> -
+   
+   
+   <a target="_blank" href="http://facebook.com/xyzscripts" class="xyz_fbook">Like us on facebook</a> -
+   <a target="_blank" href="http://twitter.com/xyzscripts" class="xyz_twitt">Follow us on twitter</a> -
+   <a target="_blank" href="https://plus.google.com/+Xyzscripts/" class="xyz_gplus">+1 us on Google+</a>
       
-   </ul>
+   
    
     </div>
+<p></p>
 <div class="xyz_subscribe">
 
-
-  <h2> Limited Period Offer</h2> 
-
-
-<div>
-
-Subscribe to our newsletter and get <b style="color: #21759B ">5 USD off</b> on premium edition.
-
-</div>
-
-
-<div>
-					
 <script language="javascript">
 function check_email(emailString)
 {
@@ -149,20 +113,11 @@ function verify_fields()
 <input type="hidden" name="redirActive" value="http://xyzscripts.com/subscription/pending/XYZWPPOP">
 <input type="hidden" name="redirPending" value="http://xyzscripts.com/subscription/active/XYZWPPOP">
 <input type="hidden" name="mode" value="1">
-<table border="0" style=" width: 100%;  color: black;">
-<tr>
-<td colspan="3">
-<span style="font-size:14px;"><b>Field marked <font style="color:#FF0000">*</font> are mandatory </b></span>
-</td>
-</tr>
-   
-<tr><td colspan="3"> </td></tr>
-   
 
-<tr>
-<td id="align" width="120px">Name</td>
-<td id="align" width="20px"> : </td>
-<td id="align">
+<b>Stay tuned to our updates :</b>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Name  : 
 <input style="border: 1px solid #3fafe3; margin-right:10px;" type="text" name="field1"  
 value="<?php  
 if ($current_user->user_firstname != "" || $current_user->user_lastname != "") 
@@ -177,29 +132,17 @@ else if (strcasecmp($current_user->user_login ,"admin")!=0 && strcasecmp($curren
 {
 	echo $current_user->user_login;	
 }
-?>" ></td>
-</tr>
-<tr >
-<td >Email Address</td><td > : </td>
-<td >
-<input style="border: 1px solid #3fafe3;" name="email" type="text" value="<?php 	echo $current_user->user_email; ?>" /><span style="color:#FF0000">*</span>			
-</td>
-</tr>
-<tr><td colspan="3" > 
+?>" >
+Email Address :
+
+<input style="border: 1px solid #3fafe3;" name="email" type="text" value="<?php 	echo $current_user->user_email; ?>" /><span style="color:#FF0000">*</span>	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+
 
 <input type="hidden" name="listName" value="1,2,">
-</td></tr>
-<tr>
-<td> </td><td> </td>
-<td >
-<input type="submit" value="subscribe" name="Submit"  onclick="javascript: if(!verify_fields()) return false; " />
-</td>
-<td> </td>
-</tr>
-<tr>
-<td colspan="3" > </td>
-</tr>
-</table>
+
+<input type="submit" id="submit_em" value="subscribe" name="Submit"  onclick="javascript: if(!verify_fields()) return false; " />
+
 </form>
 	</div>
 				
@@ -207,26 +150,36 @@ else if (strcasecmp($current_user->user_login ,"admin")!=0 && strcasecmp($curren
 
 </div>    
  <div style="clear: both;"></div>
-<div style="text-align: left;padding-top: 10px; float:left;">
-Powered by <a href="http://xyzscripts.com" target="_blank">XYZScripts</a>
-</div>
+<div style="width: 100%">
+<div class="xyz_our_plugins">
 
 
-<div style="padding-top: 10px;float:right ;">
-See Also : 
+Our Plugins : 
+
+
+
+
 
 	
-	<a target="_blank"	href="http://wordpress.org/extend/plugins/lightbox-pop/">Lightbox Pop</a> |
-	<a target="_blank"	href="http://wordpress.org/extend/plugins/popup-dialog-box/">Popup Dialog Box</a> |
-	<a target="_blank"	href="http://wordpress.org/extend/plugins/full-screen-popup/">Full Screen Popup</a> |
-	<a target="_blank"	href="http://wordpress.org/extend/plugins/quick-box-popup/">Quick Box Popup</a> |
-	<a target="_blank"	href="http://wordpress.org/extend/plugins/insert-html-snippet/">Insert HTML Snippet</a> |
-	<a target="_blank"	href="http://wordpress.org/extend/plugins/contact-form-manager/">Contact Form Manager</a> |
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/lightbox-pop/">Lightbox Pop</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/full-screen-popup/">Full Screen Popup</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/popup-dialog-box/">Popup Dialog Box</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/quick-bar/">Quick Bar</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/quick-box-popup/">Quick Box Popup</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/insert-html-snippet/">Insert HTML Snippet</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/contact-form-manager/">Contact Form Manager</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/social-media-auto-publish/">Social Media Auto Publish</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/facebook-auto-publish/">Facebook Auto Publish</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/linkedin-auto-publish/">LinkedIn Auto Publish</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/twitter-auto-publish/">Twitter Auto Publish</a> ★
+	<a target="_blank"	href="http://wordpress.org/extend/plugins/insert-php-code-snippet/">Insert PHP Code Snippet</a> ★
 	<a target="_blank"	href="http://wordpress.org/extend/plugins/newsletter-manager/">Newsletter Manager</a>
 
 </div>
  </div>   
-
+<div style="padding-top: 10px;float:left; text-align: center; width: 100%;">
+Powered by <a href="http://xyzscripts.com" target="_blank">XYZScripts</a>
+</div>
     <div style="clear: both;"></div>
 
 

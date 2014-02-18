@@ -1,15 +1,18 @@
-<style>
-	a.xyz_qbr_link:hover{text-decoration:underline;} 
-	.xyz_qbr_link{text-decoration:none;} 
-</style>
-
 <?php 
 if($_POST && isset($_POST['xyz_credit_link']))
 {
 	$xyz_qbr_tinymce=$_POST['xyz_qbr_tinymce'];
 	$xyz_credit_link=$_POST['xyz_credit_link'];
+    $xyz_qbr_enable=$_POST['xyz_qbr_enable'];
+    $xyz_qbr_adds_enable=$_POST['xyz_qbr_adds_enable'];
+    $xyz_qbr_cache_enable=$_POST['xyz_qbr_cache_enable'];
+    
+    
 	update_option('xyz_qbr_tinymce', $xyz_qbr_tinymce);
 	update_option('xyz_credit_link', $xyz_credit_link);
+    update_option('xyz_qbr_enable', $xyz_qbr_enable);
+    update_option('xyz_qbr_cache_enable', $xyz_qbr_cache_enable);
+    update_option('xyz_qbr_adds_enable', $xyz_qbr_adds_enable);
 	?>
 <div class="system_notice_area_style1" id="system_notice_area">
 	Settings updated successfully. &nbsp;&nbsp;&nbsp;<span id="system_notice_area_dismiss">Dismiss</span>
@@ -18,7 +21,11 @@ if($_POST && isset($_POST['xyz_credit_link']))
 }?>
 
 <div style="width: 98%">
-
+<?php 
+$xyz_qbr_adds_enable=get_option('xyz_qbr_adds_enable');
+if($xyz_qbr_adds_enable==1)
+{
+?>
 <div id="xyz-wp-popup-premium">
 
 <div style="float: left;padding: 0 5px">
@@ -27,11 +34,13 @@ if($_POST && isset($_POST['xyz_credit_link']))
 </h2>
 </div>
 <div style="float: left;padding: 5px">
-<a target="_blank" href="http://xyzscripts.com/members/product/purchase/XYZWPPOP"><img src="<?php  echo plugins_url("quick-bar/admin/images/orange_buynow.png"); ?>"></a>
+<a target="_blank" href="http://xyzscripts.com/members/product/purchase/XYZWPPOP"><img src="<?php  echo plugins_url("quick-bar/images/orange_buynow.png"); ?>"></a>
 </div>
 
  </div>
- 
+ <?php 
+}
+?>
     <div style="clear:both"></div>
 
 <?php 
@@ -42,32 +51,27 @@ if(get_option('xyz_credit_link')=="0"){
 	
 	Please do a favour by enabling backlink to our site. <a id="xyz_qbr_backlink" style="cursor: pointer;" >Okay, Enable</a>.
 <script type="text/javascript">
-jQuery(document).ready(function() {
+	jQuery(document).ready(function() {
+		jQuery('#xyz_qbr_backlink').click(function() {
 
-	jQuery('#xyz_qbr_backlink').click(function() {
-	
-jQuery.ajax
-	({
-	type: "POST",
-	url: "<?php echo plugins_url('quick-bar/admin/ajax-backlink.php') ?>",
-	data: 'enable=1',
-	cache: false,
-	success: function(html)
-	{	
-		jQuery("#xyz_backlink_div").html('Thank you for enabling backlink !');
-		jQuery("#xyz_backlink_div").css('background-color', '#D8E8DA');
-		jQuery("#xyz_backlink_div").css('border', '1px solid #0F801C');
+			var dataString = { 
+					action: 'ajax_backlink', 
+					enable: 1
+				};
+				jQuery.post(ajaxurl, dataString, function(response) {
+					jQuery("#xyz_backlink_div").html('Thank you for enabling backlink !');
+					jQuery("#xyz_backlink_div").css('background-color', '#D8E8DA');
+					jQuery("#xyz_backlink_div").css('border', '1px solid #0F801C');
+					jQuery("select[id=xyz_qbr_credit_link] option[value=qbr]").attr("selected", true);
+					if(window.rcheck)
+					{
+						document.location.reload();
+					}
+				});	
+			});
 		
-		jQuery("select[id=xyz_qbr_credit_link] option[value=qbr]").attr("selected", true);
-		if(window.rcheck)
-		{
-			document.location.reload();
-		}
-	}
-	});
 
-});
-});
+	});
 </script>
 </div>
 	<?php 
@@ -96,19 +100,19 @@ jQuery.ajax
 <table style="float:right; ">
 <tr>
 <td  style="float:right;">
-	<a title="Please help us to keep this plugin free forever by donating a dollar"   class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;"  target="_blank" href="http://xyzscripts.com/donate/1">Donate</a>
+	<a title="Please help us to keep this plugin free forever by donating a dollar"   class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;"  target="_blank" href="http://xyzscripts.com/donate/1"><b>Donate</b></a>
 </td>
 <td style="float:right;">
-	<a class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;" target="_blank" href="http://kb.xyzscripts.com/wordpress-plugins/quick-bar/">FAQ</a>
+	<a class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;" target="_blank" href="http://kb.xyzscripts.com/wordpress-plugins/quick-bar/"><b>FAQ</b></a> |
 </td>
 <td style="float:right;">
-	<a class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;" target="_blank" href="http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/">Readme</a>
+	<a class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;" target="_blank" href="http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/"><b>Readme</b></a> |
 </td>
 <td style="float:right;">
-	<a class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;" target="_blank" href="http://xyzscripts.com/wordpress-plugins/quick-bar/details">About</a>
+	<a class="xyz_qbr_link" style="margin-left:8px; font-size: 15px;" target="_blank" href="http://xyzscripts.com/wordpress-plugins/quick-bar/details"><b>About</b></a> |
 </td>
 <td style="float:right;">
-	<a class="xyz_qbr_link"  style="font-size:15px;" target="_blank" href="http://xyzscripts.com">XYZScripts</a>
+	<a class="xyz_qbr_link"  style="font-size:15px;" target="_blank" href="http://xyzscripts.com"><b>XYZScripts</b></a> |
 </td>
 
 </tr>

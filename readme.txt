@@ -3,8 +3,8 @@ Contributors: f1logic
 Donate link: http://xyzscripts.com/donate/
 Tags: quick bar, quickbar, sidebar, floating sidebars, floating notice bar, floating bar, quick popup bar, quick access bar, quick notice bar, quick message bar, quick display bar, quick bar with custom message
 Requires at least: 2.8
-Tested up to: 3.6
-Stable tag: 1.0
+Tested up to: 3.8.1
+Stable tag: 1.1
 License: GPLv2 or later
 
 Create a javascript based, light-weight and non-annoying floating notice bar or sidebar  in your blog.
@@ -20,6 +20,7 @@ A quicklook into Quick Bar
     ★ Display based on browsed number of pages
     ★ Css settings like color, z-index, border etc
     ★ Shortcode for displaying quick bar in specific pages
+    ★ Display specificaly in pages/posts/home page
 
 This plugin allows you to create a quick popup bar (aka sidebar) with custom content in your site. You can place it like a floating sidebar on any side of the page using the available predefined positions.
 
@@ -71,11 +72,15 @@ You may  use the quick bar (sidebar) to display any type of contents such as soc
 
 Yes, you can do this by using the shortcode provided from settings page.
 
-= 5. Can I create multiple quick bar popup boxes  for different pages ? =
+= 5. Does it work with caching plugins ? =
+
+You can turn on compatibility with cache plugins from settings page. Please  note that since this method uses ajax, the popup will be a rendered a bit slower than in normal mode.
+
+= 6. Can I create multiple quick bar popup boxes  for different pages ? =
 
 To create multiple quickbars (sidebars), you need to purchase the premium version.
 
-= 6. Where can i get the premium version ? =
+= 7. Where can i get the premium version ? =
 
 The premium version can be purchased from our site [xyzscripts.com](http://xyzscripts.com/wordpress-plugins/xyz-wp-popup/ "XYZ WP Popup").
 
@@ -87,6 +92,13 @@ More questions ? [Drop a mail](http://xyzscripts.com/support/ "XYZScripts Suppor
 1. Sample quick bar. 
 
 == Changelog ==
+
+= 1.1 =
+* Display specifically in pages/posts/home page.
+* Enable/disable premium version ads.
+* Option to enable/disable popup.
+* Compatibility with cache plugins.
+* Network installation support.
 
 = 1.0 =
 * First official launch.

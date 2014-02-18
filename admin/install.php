@@ -1,5 +1,24 @@
 <?php
 
+function xyz_qbr_em_network_install($networkwide) {
+	global $wpdb;
+
+	if (function_exists('is_multisite') && is_multisite()) {
+		// check if it is a network activation - if so, run the activation function for each blog id
+		if ($networkwide) {
+			$old_blog = $wpdb->blogid;
+			// Get all blog ids
+			$blogids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+			foreach ($blogids as $blog_id) {
+				switch_to_blog($blog_id);
+				qbr_install();
+			}
+			switch_to_blog($old_blog);
+			return;
+		}
+	}
+	qbr_install();
+}
 
 function qbr_install()
 {
@@ -9,6 +28,11 @@ function qbr_install()
 		add_option("xyz_credit_link", '0');
 	}
 	add_option("xyz_qbr_tinymce", '1');
+	add_option("xyz_qbr_cache_enable", '0');
+   add_option("xyz_qbr_enable",'1');
+   add_option("xyz_qbr_showing_option",'0,0,0');
+   add_option("xyz_qbr_adds_enable",'1');
+   
 	add_option("xyz_qbr_html", 'Hello world.');
 	add_option("xyz_qbr_top", '0');
 	add_option("xyz_qbr_width", '100');
@@ -52,7 +76,7 @@ function qbr_install()
 	}
 	
 }
-register_activation_hook(XYZ_QBR_PLUGIN_FILE,'qbr_install');
-
+//register_activation_hook(XYZ_QBR_PLUGIN_FILE,'qbr_install');
+register_activation_hook( XYZ_QBR_PLUGIN_FILE ,'xyz_qbr_em_network_install');
 
 ?>

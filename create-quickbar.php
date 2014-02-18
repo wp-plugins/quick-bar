@@ -1,22 +1,96 @@
 <?php
-
-add_action ( 'get_footer', 'qbr_lightbox_create');//, [priority], [accepted_args] );
-
-wp_enqueue_script('jquery');
-function qbr_lightbox_create()
+$xyz_qbr_cache_enable=get_option('xyz_qbr_cache_enable');
+if($xyz_qbr_cache_enable==1)
 {
-	$page_option=get_option('xyz_qbr_page_option');
-	
-	if($page_option==3)
-	{
-
-		return false;
-	}
-	echo qbr_lightbox_display();
+add_action ( 'get_footer', 'xyz_qbr_container');//, [priority], [accepted_args] );
+}
+else
+{
+	add_action ( 'get_footer', 'xyz_qbr_action_callback');
+}
+function xyz_qbr_container()
+{
+	echo "<span id='xyz_qbr_container'></span>";
 }
 
-function qbr_lightbox_display()
+	add_action( 'wp', 'xyz_qbr_create' );
+
+function xyz_qbr_create()
 {
+	global $xyz_qbr_cache_enable;
+	
+	$ispage=is_page()?1:0;
+	$ispost=is_single()?1:0;
+	$ishome=is_home()?1:0;
+	
+	wp_enqueue_script('jquery');
+	
+	if($xyz_qbr_cache_enable==1)
+	{
+	wp_enqueue_script( 'xyz_qbr_ajax_script', plugins_url( 'qbr_request.js', __FILE__ ), array('jquery') );
+	wp_localize_script( 'xyz_qbr_ajax_script', 'xyz_qbr_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ),'ispage'=>$ispage,'ispost'=>$ispost,'ishome'=>$ishome));
+	}
+}
+
+add_action( 'wp_ajax_xyz_qbr_action', 'xyz_qbr_action_callback' );
+add_action( 'wp_ajax_nopriv_xyz_qbr_action', 'xyz_qbr_action_callback' );
+
+function xyz_qbr_action_callback()
+{
+	global $xyz_qbr_cache_enable;
+	
+	 $page_option=get_option('xyz_qbr_page_option');
+	 $xyz_qbr_enable=get_option('xyz_qbr_enable');
+	 $xyz_qbr_showing_option=get_option('xyz_qbr_showing_option');
+	 
+	 if($page_option==2)
+	 {
+	 	if($xyz_qbr_cache_enable==1)
+	 	{
+		$page=$_POST['xyz_qbr_pg'];
+		$post=$_POST['xyz_qbr_ps'];
+		$home=$_POST['xyz_qbr_hm'];
+	 	}
+	 	else 
+	 	{
+	 		$page=is_page()?1:0;
+	 		$post=is_single()?1:0;
+	 		$home=is_home()?1:0;
+	 	}	
+		$xyz_qbr_sh_arr=explode(",", $xyz_qbr_showing_option);
+		
+		if (!(($xyz_qbr_sh_arr[0]==1 && $page==1) || ($xyz_qbr_sh_arr[1]==1 && $post==1 ) || ($xyz_qbr_sh_arr[2]==1 && $home==1 )))
+		
+			return;
+		
+	 }
+	if($page_option==3)
+	{
+		if($xyz_qbr_cache_enable==1)
+		{
+			
+        $shortcode=$_POST['xyz_qbr_shortcd'];
+        if($shortcode!=1)
+		return;
+		}
+		else 
+		   return;
+		    
+	}
+
+	if($xyz_qbr_enable==1)
+		echo xyz_qbr_display();
+	if($xyz_qbr_cache_enable==1)
+	{
+	die();
+	}
+}
+
+
+
+function xyz_qbr_display()
+{
+
 	$imgpath=plugins_url()."/quick-bar/images/";
 	$closeimage=$imgpath."close.png";
 	$dbcloseimage=$imgpath."dbclose.png";
@@ -97,9 +171,9 @@ right: 0px;
 
 
 <div id="qbr_light" class="qbr_content"><?php if(!isset($_COOKIE['_xyz_qbr_until'])) {?>
-<div class="qbr"><?php echo $qbr_title;  if($close_button_option==1) {?><img id="closediv"   src="<?php  echo $dbcloseimage;?>" onclick = "javascript:qbr_hide_lightbox()"><?php }?></div>
+<div class="qbr"><?php if($close_button_option==1) {?><img id="closediv"   src="<?php  echo $dbcloseimage;?>" onclick = "javascript:qbr_hide_lightbox()"><?php }?></div>
 <!-- <div width="100%" height="20px" style="text-align:right;padding:0px;margin:0px;"><a href = "javascript:void(0)" onclick = "javascript:qbr_hide_lightbox()">CLOSE</a></div> -->
-<?php if($iframe_option==1) { ?><iframe  src="<?php echo  plugins_url();?>/quick-bar/iframe.php" class="qbr_iframe" scrolling="no"></iframe><?php }else{  
+<?php if($iframe_option==1) { ?><iframe  src="<?php echo  get_bloginfo('wpurl') ;?>/index.php?xyz_qbr=iframe" class="qbr_iframe" scrolling="no"></iframe><?php }else{  
 echo do_shortcode($html);}
 }?>
 </div>
@@ -113,13 +187,15 @@ var qbrwid=<?php echo $width; ?>;
 var qbrwiddim="<?php echo $width_dim;?>";
 var qbrhe=<?php echo $height; ?>;
 var qbrhedim="<?php echo $height_dim;?>";
-
+var qbrbordwidth=<?php echo $border_width;?>;
 var screenheight=jQuery(window).height(); 
 var screenwidth=jQuery(window).width(); 
+
+
+
 if(qbrhedim=="px")
-
 {
-
+	//hadjust=screenheight-(2*bordwidth);
 hadjust=(screenheight-qbrhe)/2;
 
 }
@@ -130,7 +206,7 @@ else
 if(qbrwiddim=="px")
 
 {
-
+	//wiadjust=screenwidth-(2*bordwidth);
 wiadjust=(screenwidth-qbrwid)/2;
 
 }
@@ -208,10 +284,6 @@ var bordwidth=<?php echo $border_width;?>;
 	}
 
 	
-	
-
-
-
 var xyz_qbr_tracking_cookie_name="_xyz_qbr_until";
 var xyz_qbr_pc_cookie_name="_xyz_qbr_pc";
 var xyz_qbr_tracking_cookie_val=xyz_qbr_get_cookie(xyz_qbr_tracking_cookie_name);
@@ -294,6 +366,4 @@ ob_clean();
 return  $lbc;
 
 }
-
-
 ?>

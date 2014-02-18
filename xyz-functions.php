@@ -21,11 +21,15 @@ function xyz_qbr_links($links, $file)
 	$base = plugin_basename(XYZ_QBR_PLUGIN_FILE);
 	if ($file == $base) 
 	{
+		
+		$links[] = '<a href="http://kb.xyzscripts.com/wordpress-plugins/quick-bar/"  title="FAQ">FAQ</a>';
+		$links[] = '<a href="http://docs.xyzscripts.com/wordpress-plugins/quick-bar-plugin/"  title="Read Me">README</a>';
+		$links[] = '<a href="http://xyzscripts.com/donate/1" title="Donate">DONATE</a>';
 
 		$links[] = '<a href="http://xyzscripts.com/support/" class="xyz_support" title="Support"></a>';
 		$links[] = '<a href="http://twitter.com/xyzscripts" class="xyz_twitt" title="Follow us on twitter"></a>';
 		$links[] = '<a href="https://www.facebook.com/xyzscripts" class="xyz_fbook" title="Facebook"></a>';
-		$links[] = '<a href="https://plus.google.com/101215320403235276710/" class="xyz_gplus" title="+1"></a>';
+		$links[] = '<a href="https://plus.google.com/+Xyzscripts/" class="xyz_gplus" title="+1 us on Google+"></a>';
 	}
 	return $links;
 }
