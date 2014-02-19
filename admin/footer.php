@@ -22,6 +22,12 @@ if($xyz_qbr_adds_enable==1)
 <a target="_blank" href="http://xyzscripts.com/members/product/purchase/XYZWPPOP"><img src="<?php  echo plugins_url("quick-bar/images/orange_buynow.png"); ?>"></a>
 </div>
 
+
+<div style="float: left; padding: 0 5px">
+	<h2 style="vertical-align: middle;text-shadow: 1px 1px 1px #686868">
+			( <a href="<?php echo admin_url('admin.php?page=quickbar-about');?>">Compare Features</a> ) 
+	</h2>		
+	</div>
    
  </div>
 

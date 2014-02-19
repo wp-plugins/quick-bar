@@ -195,7 +195,7 @@ var screenwidth=jQuery(window).width();
 
 if(qbrhedim=="px")
 {
-	//hadjust=screenheight-(2*bordwidth);
+//hadjust=screenheight-(2*bordwidth);
 hadjust=(screenheight-qbrhe)/2;
 
 }
@@ -206,7 +206,7 @@ else
 if(qbrwiddim=="px")
 
 {
-	//wiadjust=screenwidth-(2*bordwidth);
+//wiadjust=screenwidth-(2*bordwidth);
 wiadjust=(screenwidth-qbrwid)/2;
 
 }
