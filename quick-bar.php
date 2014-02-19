@@ -32,7 +32,7 @@ if ( !function_exists( 'add_action' ) )
 }
 
 ob_start();
-error_reporting(0);
+//error_reporting(0);
 define('XYZ_QBR_PLUGIN_FILE',__FILE__);
 
 require( dirname( __FILE__ ) . '/xyz-functions.php' );
