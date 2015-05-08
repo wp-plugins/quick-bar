@@ -312,7 +312,7 @@ $xyz_qbr_repeat_interval_timing=get_option('xyz_qbr_repeat_interval_timing');
 <td scope="row" colspan="1"><label for="lbx_display_trigger"> Display trigger</label></td><td style="color: red; ">Available in premium version only </td></tr>
 				<tr valign="top" id="xyz_qbr_close">
 
-<td scope="row" colspan="1"><label for="xyz_qbr_bgimage_option"> Close button option </label></td><td>
+<td scope="row" colspan="1"><label for="xyz_qbr_close_button_option"> Close button option </label></td><td>
 
 
 <select name="xyz_qbr_close_button_option" id="xyz_qbr_close_button_option"  >
@@ -326,7 +326,7 @@ $xyz_qbr_repeat_interval_timing=get_option('xyz_qbr_repeat_interval_timing');
 </tr>
 <tr valign="top">
 
-<td scope="row" colspan="1"><label for="xyz_qbr_bgimage_option">Display as iframe </label></td><td>
+<td scope="row" colspan="1"><label for="xyz_qbr_iframe">Display as iframe </label></td><td>
 
 
 <select name="xyz_qbr_iframe" id="xyz_qbr_iframe"  >

@@ -3,7 +3,7 @@
 Plugin Name:Quick Bar
 Plugin URI: http://xyzscripts.com/wordpress-plugins/quick-bar/
 Description: This plugin allows you to create a quick access bar with custom content in your site. You can customize the quick bar display by configuring various settings such as  position settings (height,width,top,left), display logic settings (time delay after page load, number of pages to browse,  repeat interval) and style settings(z-index, opacity, color, border etc). The plugin supports automatic and manual (shortcode) display.
-Version: 1.1
+Version: 1.2
 Author: xyzscripts.com
 Author URI: http://xyzscripts.com/
 License: GPLv2 or later

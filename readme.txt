@@ -3,8 +3,8 @@ Contributors: f1logic
 Donate link: http://xyzscripts.com/donate/
 Tags: quick bar, quickbar, sidebar, floating sidebars, floating notice bar, floating bar, quick popup bar, quick access bar, quick notice bar, quick message bar, quick display bar, quick bar with custom message
 Requires at least: 2.8
-Tested up to: 4.0
-Stable tag: 1.1
+Tested up to: 4.2.2
+Stable tag: 1.2
 License: GPLv2 or later
 
 Create a javascript based, light-weight and non-annoying floating notice bar or sidebar  in your blog.
@@ -92,6 +92,10 @@ More questions ? [Drop a mail](http://xyzscripts.com/support/ "XYZScripts Suppor
 1. Sample quick bar. 
 
 == Changelog ==
+
+= 1.2 =
+* Responsive quick bar
+* Fixed a few bugs
 
 = 1.1 =
 * Display specifically in pages/posts/home page.

@@ -12,7 +12,7 @@ $xyz_qbr_adds_enable=get_option('xyz_qbr_adds_enable');
 
 <tr valign="top" id="xyz_qbr">
 
-<td scope="row" colspan="1" width="50%"><label for="xyz_tinymce">Enable tiny MCE filter to prevent auto removal of &lt br &gt and &lt p &gt tags ?</label>	</td>
+<td scope="row" colspan="1" width="50%"><label for="xyz_qbr_tinymce">Enable tiny MCE filter to prevent auto removal of &lt br &gt and &lt p &gt tags ?</label>	</td>
 
 <td><select name="xyz_qbr_tinymce" id="xyz_qbr_tinymce" >
 
@@ -26,7 +26,7 @@ $xyz_qbr_adds_enable=get_option('xyz_qbr_adds_enable');
 
 <tr valign="top" id="xyz_qbr">
 
-<td scope="row" colspan="1"><label for="xyz_credit_link">Enable credit link to author ?</label>	</td><td><select name="xyz_credit_link" id="xyz_qbr_credit_link" >
+<td scope="row" colspan="1"><label for="xyz_qbr_credit_link">Enable credit link to author ?</label>	</td><td><select name="xyz_credit_link" id="xyz_qbr_credit_link" >
 
 <option value ="qbr" <?php if($xyz_credit_link=='qbr') echo 'selected'; ?> >Yes </option>
 

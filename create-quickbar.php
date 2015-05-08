@@ -129,10 +129,12 @@ $position_predefined=get_option('xyz_qbr_position_predefined');
 
 global $wpdb;
 
-ob_flush();
+$tmp=ob_get_contents();
+ob_clean();
 ob_start();
-	?>
-	<style type="text/css">
+	
+?>
+<style type="text/css">
 
 .qbr_content {
 display: none;
@@ -146,7 +148,11 @@ border: <?php echo $border_width; ?>px solid <?php echo $border_color;?>;
 background-color: <?php echo $bg_color;?>;
 z-index:<?php echo $z_index+1;?>;
 overflow: hidden;
-border-radius:<?php echo $corner_radius;?>px
+border-radius:<?php echo $corner_radius;?>px;
+
+box-sizing: content-box;
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
 
 }
 .qbr_iframe{
@@ -179,6 +185,8 @@ echo do_shortcode($html);}
 </div>
 
 <script type="text/javascript">
+function xyz_qbr_settings()
+{
 var hadjust;
 var wiadjust;
 
@@ -189,6 +197,7 @@ var qbrhe=<?php echo $height; ?>;
 var qbrhedim="<?php echo $height_dim;?>";
 var qbrbordwidth=<?php echo $border_width;?>;
 var screenheight=jQuery(window).height(); 
+/*var screenheight=window.innerHeight;*/
 var screenwidth=jQuery(window).width(); 
 
 
@@ -270,6 +279,10 @@ var bordwidth=<?php echo $border_width;?>;
 	
 		var hadnjust=(screenheight*qbrhe)/100;
 		 newheight=hadnjust-(2*bordwidth);
+
+		 if(newheight<0)
+			 newheight=0;
+		 
 		 document.getElementById("qbr_light").style.height=newheight+'px';
 	}
 	
@@ -280,10 +293,14 @@ var bordwidth=<?php echo $border_width;?>;
 		
 		var wiadnjust=(screenwidth*qbrwid)/100;
 		 newwidth=wiadnjust-(2*bordwidth);
+
+		 if(newwidth<0)
+			 newwidth=0;
+		 
 			document.getElementById("qbr_light").style.width=newwidth+'px';
 	}
 
-	
+}	
 var xyz_qbr_tracking_cookie_name="_xyz_qbr_until";
 var xyz_qbr_pc_cookie_name="_xyz_qbr_pc";
 var xyz_qbr_tracking_cookie_val=xyz_qbr_get_cookie(xyz_qbr_tracking_cookie_name);
@@ -325,7 +342,11 @@ document.getElementById("qbr_light").innerHTML="";
 function qbr_show_lightbox()
 {
 
-//alert(qbr_tracking_cookie_val);
+	xyz_qbr_settings();
+	jQuery(window).resize(function(){
+		xyz_qbr_settings();
+
+ });
 
 if(xyz_qbr_tracking_cookie_val==1)
 return;
@@ -361,9 +382,11 @@ setTimeout("qbr_show_lightbox()",<?php echo $delay*1000;?>);
 
 
 <?php 
-$lbc=ob_get_contents();
+
+$lbc = ob_get_contents();
 ob_clean();
-return  $lbc;
+echo $tmp;
+return $lbc;
 
 }
 ?>
