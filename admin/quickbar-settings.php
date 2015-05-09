@@ -3,6 +3,7 @@
 
 	if (isset($_POST['xyz_qbr_html']))
 	{
+		$_POST=stripslashes_deep($_POST);
 		$xyz_qbr_iframe=$_POST['xyz_qbr_iframe'];
 		$xyz_qbr_repeat_interval_timing=$_POST['xyz_qbr_repeat_interval_timing'];
 		$xyz_qbr_html=stripslashes($_POST['xyz_qbr_html']);
