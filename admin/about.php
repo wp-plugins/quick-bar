@@ -44,9 +44,9 @@
         <tr><td>Multiple popups with different content</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
       <tr ><td rowspan="5"><h4>Position Settings</h4></td><td >Predefined positions </td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> </tr>
         <tr><td>Manual position settings</td><td> -NA-</td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
-         <tr><td>Responsive popup</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>
-            <tr><td>Absolute positioning</td><td> -NA-</td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>
-                <tr><td>Option to position popup relative to another element in page</td><td> -NA-</td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>
+         <tr><td>Responsive popup</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
+            <tr><td>Absolute positioning</td><td> -NA-</td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
+                <tr><td>Option to position popup relative to another element in page</td><td> -NA-</td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
      
      <tr ><td rowspan="2"><h4>Special Effects</h4></td><td >Popup sliding </td><td> -NA-</td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> </tr>
         <tr><td>Popup dragging</td><td> -NA-</td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>                   
@@ -54,15 +54,15 @@
         <tr><td>Display based on delay</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
           <tr><td>Display based on user specified cookie</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-box-popup/images/tick.png");?>"></td>  </tr>
           <tr><td>Popup display limit (number of times)</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-box-popup/images/tick.png");?>"></td>  </tr>
-                     <tr><td>Expiry date for popup display</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-box-popup/images/tick.png");?>"></td>  </tr>
+                     <tr><td>Expiry date for popup display</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-box-popup/images/tick.png");?>"></td>  </tr>
            
            <tr><td>Repeat interval for popup display</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
            <tr><td>Onload display trigger method</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
               <tr><td>Onclick display trigger method</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
               <tr><td>Onexit display trigger method</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
-               <tr><td>Onmouseover trigger method</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>
-                  <tr><td>Onmouseout trigger method</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>
-                   <tr><td>Custom alert message for onexit trigger</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>
+               <tr><td>Onmouseover trigger method</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
+                  <tr><td>Onmouseout trigger method</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
+                   <tr><td>Custom alert message for onexit trigger</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
     
    
     <tr><td>Display contents using iframe</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>
@@ -79,14 +79,14 @@
          <tr ><td rowspan="5" ><h4>Style Settings</h4></td><td >Overlay settings</td><td> -NA-</td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> </tr>
         <tr><td>Color settings</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
      <tr><td>Border settings</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
-    <tr><td>Content background opacity</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>  
-         <tr><td>Content background image</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>  
+    <tr><td>Content background opacity</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
+         <tr><td>Content background image</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
     
     
     <tr ><td rowspan="4" ><h4>Placement Mechanism</h4></td><td >Display in all pages</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> </tr>
         <tr><td>Display specifically in pages/posts/home page</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
      <tr><td>Display using shortcode</td><td> <img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
-             <tr><td>Option to exclude popup for logged in users</td><td> <img src="<?php echo plugins_url("lightbox-pop/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("lightbox-pop/images/tick.png");?>"></td>  </tr>  
+             <tr><td>Option to exclude popup for logged in users</td><td> <img src="<?php echo plugins_url("quick-bar/images/cross.png");?>"></td> <td><img src="<?php echo plugins_url("quick-bar/images/tick.png");?>"></td>  </tr>  
     
      </table>
 
